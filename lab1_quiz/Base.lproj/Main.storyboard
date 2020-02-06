@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="lab1_quiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JLG-kz-1SG">
+                                <rect key="frame" x="158" y="160" width="98" height="30"/>
+                                <state key="normal" title="Next Question"/>
+                                <connections>
+                                    <action selector="showNextQuestion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="th4-u2-RDe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTO-7C-CKH">
+                                <rect key="frame" x="160.66666666666666" y="335" width="93" height="30"/>
+                                <state key="normal" title="Show Answer"/>
+                                <connections>
+                                    <action selector="showAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aAM-k1-ght"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E0i-5d-bnr">
+                                <rect key="frame" x="194.66666666666666" y="306" width="25" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VxM-Nh-VPN">
+                                <rect key="frame" x="194.66666666666666" y="131" width="25" height="20.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="JLG-kz-1SG" firstAttribute="centerX" secondItem="VxM-Nh-VPN" secondAttribute="centerX" id="4WC-KL-2cu"/>
+                            <constraint firstItem="E0i-5d-bnr" firstAttribute="top" secondItem="JLG-kz-1SG" secondAttribute="bottom" constant="116" id="Kc0-Co-tL4"/>
+                            <constraint firstItem="oTO-7C-CKH" firstAttribute="centerX" secondItem="VxM-Nh-VPN" secondAttribute="centerX" id="OYc-oO-vFB"/>
+                            <constraint firstItem="VxM-Nh-VPN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="X2U-hm-Svh"/>
+                            <constraint firstItem="VxM-Nh-VPN" firstAttribute="leading" secondItem="E0i-5d-bnr" secondAttribute="leading" id="aeg-kn-GaJ"/>
+                            <constraint firstItem="VxM-Nh-VPN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="87" id="agZ-9n-1mS"/>
+                            <constraint firstItem="E0i-5d-bnr" firstAttribute="centerX" secondItem="VxM-Nh-VPN" secondAttribute="centerX" id="jQi-BT-Fck"/>
+                            <constraint firstItem="oTO-7C-CKH" firstAttribute="top" secondItem="E0i-5d-bnr" secondAttribute="bottom" constant="8" id="nl8-oh-gDQ"/>
+                            <constraint firstItem="JLG-kz-1SG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="116" id="y14-Ay-IYD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="answerLabel" destination="E0i-5d-bnr" id="TSZ-Nq-RXc"/>
+                        <outlet property="questionLabel" destination="VxM-Nh-VPN" id="8nj-hr-vAz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="114.50892857142857"/>
+        </scene>
+    </scenes>
+</document>
